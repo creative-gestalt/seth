@@ -14,3 +14,6 @@ Contain the practice elements from the Unknown Reality volumes.
 Allow saving and editing results obtained by the search engine.
 
 Have an about section with information about the author.
+
+
+![alt text](https://github.com/creative-gestalt/seth/blob/master/screenshots/search.png) ![alt text](https://github.com/creative-gestalt/seth/blob/master/screenshots/exercises.png) ![alt text](https://github.com/creative-gestalt/seth/blob/master/screenshots/drawer.png)
