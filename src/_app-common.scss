@@ -1,0 +1,103 @@
+@import "~@nativescript/theme/core";
+@import "/_app-variables";
+
+// Font icon class
+.fab {
+  font-family: "Font Awesome 5 Brands", "fa-brands-400";
+  font-weight: 400;
+}
+
+.fas {
+  font-family: "Font Awesome 5 Free", "fa-solid-900";
+  font-weight: 900;
+}
+
+.far {
+  font-family: "Font Awesome 5 Free", "fa-regular-400";
+  font-weight: 400;
+}
+
+// Common page class
+.material-action-bar {
+  background-color: #272727;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.page__content {
+  background-color: #121212;
+
+  &-icon,
+  &-placeholder {
+    color: gray;
+    font-size: 20;
+    vertical-align: center;
+    horizontal-align: center;
+  }
+
+  &-icon {
+    font-size: 72;
+    vertical-align: top;
+    margin-top: 20%;
+  }
+
+  .exercise {
+    width: 95%;
+    border-radius: 5px;
+    background-color: $overlay-01dp;
+    separator-color: $overlay-24dp;
+
+    &-title {
+      height: 55em;
+      padding-left: 15em;
+      color: rgba(255, 255, 255, .87);
+      vertical-align: center;
+      //border-top-width: 1px;
+      border-bottom-width: 1px;
+      //border-top-color: $overlay-12dp;
+      border-bottom-color: $overlay-12dp;
+    }
+  }
+
+  .book-category {
+    padding-left: 10em;
+    padding: 20em;
+    color: rgba(255, 255, 255, .87);
+  }
+
+  .directions {
+    padding: 15em;
+    line-height: 3.5em;
+    white-space: normal;
+    color: rgba(255, 255, 255, .87);
+  }
+}
+
+// Drawer navigation custom styles
+.nt-drawer__header {
+  background-color: $overlay-04dp;
+}
+
+.nt-drawer__body {
+  background-color: $background-dark;
+  color: rgba(255, 255, 255, .87);
+}
+
+.nt-drawer__header-brand {
+  color: rgba(255, 255, 255, .87);
+}
+
+.nt-drawer__header-footnote {
+  color: rgba(255, 255, 255, .87);
+}
+
+.nt-drawer__header-image {
+  color: gray;
+}
+
+.nt-drawer__list-item.-selected {
+  background-color: rgba(255, 255, 255, .25);
+
+  Label {
+    color: rgba(255, 255, 255, .87);
+  }
+}

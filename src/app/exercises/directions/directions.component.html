@@ -1,0 +1,15 @@
+<ActionBar class="material-action-bar">
+    <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+    <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
+                ios.position="left">
+    </ActionItem>
+    <Label [text]="name"></Label>
+</ActionBar>
+
+<GridLayout class="page__content">
+<!--    <Label class="page__content-icon far" text="&#xf1ea;"></Label>-->
+    <!--    <Label class="page__content-placeholder" [text]="exercises"></Label>-->
+    <ScrollView row="0">
+        <Label class="directions h3" [text]="directions"></Label>
+    </ScrollView>
+</GridLayout>
