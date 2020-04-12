@@ -15,13 +15,13 @@
                 </GridLayout>
 
                 <GridLayout columns="auto, *" class="nt-drawer__list-item"
-                            [class.-selected]="isComponentSelected('/exercises')" (tap)="onNavItemTap('/exercises')">
+                            [class.-selected]="isComponentSelected('/exercises/exercises')" (tap)="onNavItemTap('/exercises')">
                     <Label col="0" text="&#xf5dc;" class="nt-icon fas"></Label>
                     <Label col="1" text="Exercises" class="p-r-10"></Label>
                 </GridLayout>
 
                 <GridLayout columns="auto, *" class="nt-drawer__list-item"
-                            [class.-selected]="isComponentSelected('/practice')" (tap)="onNavItemTap('/practice')">
+                            [class.-selected]="isComponentSelected('/practice/elements')" (tap)="onNavItemTap('/practice')">
                     <Label col="0" text="&#xf46d;" class="nt-icon fas"></Label>
                     <Label col="1" text="Practice Elements" class="p-r-10"></Label>
                 </GridLayout>

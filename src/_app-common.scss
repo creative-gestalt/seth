@@ -40,6 +40,18 @@
     margin-top: 20%;
   }
 
+  &-quotes {
+    .quote {
+      &-text {
+        color: rgba(255, 255, 255, .87);
+      }
+
+      &-book {
+        color: rgba(255, 255, 255, .6);
+      }
+    }
+  }
+
   .exercise {
     width: 95%;
     border-radius: 5px;

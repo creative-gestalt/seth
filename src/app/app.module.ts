@@ -5,6 +5,7 @@ import { SharedModule } from '~/app/shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 
 import { DatabaseExercisesPractice } from '~/app/shared/databases/database-exercises-practice';
+import { DatabaseSaved } from '~/app/shared/databases/database-saved';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -21,7 +22,8 @@ import { AppComponent } from './app.component';
         AppComponent
     ],
     providers: [
-        DatabaseExercisesPractice
+        DatabaseExercisesPractice,
+        DatabaseSaved
     ],
     schemas: [
         NO_ERRORS_SCHEMA

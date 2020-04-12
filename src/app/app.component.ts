@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { DrawerTransitionBase, RadSideDrawer, SlideInOnTopTransition } from 'nativescript-ui-sidedrawer';
 import { DatabaseExercisesPractice } from '~/app/shared/databases/database-exercises-practice';
+import { DatabaseSaved } from '~/app/shared/databases/database-saved';
 import { RouterExtensions } from 'nativescript-angular/router';
 import * as app from 'tns-core-modules/application';
 import { Page } from 'tns-core-modules/ui/page/page';
@@ -18,6 +19,7 @@ export class AppComponent implements OnInit {
     constructor(
         private _page: Page,
         private _router: Router,
+        private _saved: DatabaseSaved,
         private _routerExtensions: RouterExtensions,
         private _exercisePractice: DatabaseExercisesPractice
     ) {

@@ -25,7 +25,6 @@ export class SavedComponent implements OnInit {
     ngOnInit(): void {
         this._savedQuotes.fetchSavedQuotes().then((results) => {
             this._saved = results;
-            console.log(results);
         });
     }
 
