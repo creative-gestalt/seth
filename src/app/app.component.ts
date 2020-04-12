@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
-import { RouterExtensions } from 'nativescript-angular/router';
 import { DrawerTransitionBase, RadSideDrawer, SlideInOnTopTransition } from 'nativescript-ui-sidedrawer';
-import { filter } from 'rxjs/operators';
+import { DatabaseExercisesPractice } from '~/app/shared/databases/database-exercises-practice';
+import { RouterExtensions } from 'nativescript-angular/router';
 import * as app from 'tns-core-modules/application';
 import { Page } from 'tns-core-modules/ui/page/page';
+import { filter } from 'rxjs/operators';
 
 @Component({
     selector: 'ns-app',
@@ -17,7 +18,9 @@ export class AppComponent implements OnInit {
     constructor(
         private _page: Page,
         private _router: Router,
-        private _routerExtensions: RouterExtensions) {
+        private _routerExtensions: RouterExtensions,
+        private _exercisePractice: DatabaseExercisesPractice
+    ) {
     }
 
     ngOnInit(): void {

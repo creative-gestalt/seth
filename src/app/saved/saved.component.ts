@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ObservableArray } from 'tns-core-modules/data/observable-array';
+import { DatabaseSaved } from '~/app/shared/databases/database-saved';
+import { Saved } from '~/app/saved/interfaces/saved.interface';
 import { RadSideDrawer } from 'nativescript-ui-sidedrawer';
 import * as app from 'tns-core-modules/application';
 
@@ -8,12 +11,22 @@ import * as app from 'tns-core-modules/application';
 })
 export class SavedComponent implements OnInit {
 
-    constructor() {
-        // Use the component constructor to inject providers.
+    get saved(): ObservableArray<Saved> {
+        return this._saved;
+    }
+
+    private _saved: ObservableArray<Saved>;
+
+    constructor(
+        private _savedQuotes: DatabaseSaved
+    ) {
     }
 
     ngOnInit(): void {
-        // Init your component properties here.
+        this._savedQuotes.fetchSavedQuotes().then((results) => {
+            this._saved = results;
+            console.log(results);
+        });
     }
 
     onDrawerButtonTap(): void {

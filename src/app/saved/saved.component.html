@@ -7,6 +7,9 @@
 </ActionBar>
 
 <GridLayout class="page__content">
-    <Label class="page__content-icon fas" text="&#xf015;"></Label>
-    <Label class="page__content-placeholder" text="<!-- Page content goes here -->"></Label>
+    <RadListView [items]="saved">
+        <ng-template let-item="item">
+            <Label [text]="item"></Label>
+        </ng-template>
+    </RadListView>
 </GridLayout>

@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { DatabaseExercisesPractice } from '~/app/shared/databases/database-exercises-practice';
-import { RouterExtensions } from 'nativescript-angular/router';
 import { RadSideDrawer } from 'nativescript-ui-sidedrawer';
 import * as app from 'tns-core-modules/application';
+import { DatabaseExercisesPractice } from '~/app/shared/databases/database-exercises-practice';
+import { RouterExtensions } from 'nativescript-angular/router';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({

@@ -1,0 +1,25 @@
+<ActionBar class="material-action-bar">
+    <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+    <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
+                ios.position="left">
+    </ActionItem>
+    <Label text="Practice Elements"></Label>
+</ActionBar>
+
+<ScrollView class="page__content">
+    <StackLayout>
+        <Label class="book-category" text="The Unknown Reality Volume 1"></Label>
+
+        <StackLayout class="exercise" *ngFor="let element of unknownOne" [androidElevation]="elevation">
+            <Label (loaded)="onLabelLoaded($event)" class="exercise-title" [text]="element.name"
+                   (tap)="onElementTap($event, element.directions, element.name)"></Label>
+        </StackLayout>
+
+        <Label class="book-category" text="The Unknown Reality Volume 2"></Label>
+
+        <StackLayout class="exercise" *ngFor="let element of unknownTwo" [androidElevation]="elevation">
+            <Label (loaded)="onLabelLoaded($event)" class="exercise-title" [text]="element.name"
+                   (tap)="onElementTap($event, element.directions, element.name)"></Label>
+        </StackLayout>
+    </StackLayout>
+</ScrollView>

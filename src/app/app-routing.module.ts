@@ -15,7 +15,9 @@ const routes: Routes = [
     { path: 'about', loadChildren: () => import('~/app/about/about.module')
             .then((m) => m.AboutModule) },
     { path: 'settings', loadChildren: () => import('~/app/settings/settings.module')
-            .then((m) => m.SettingsModule) }
+            .then((m) => m.SettingsModule) },
+    { path: 'shared', loadChildren: () => import('~/app/shared/shared.module')
+            .then((m) => m.SharedModule) }
 ];
 
 @NgModule({

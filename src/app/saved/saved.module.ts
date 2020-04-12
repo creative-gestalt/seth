@@ -3,11 +3,13 @@ import { NativeScriptCommonModule } from 'nativescript-angular/common';
 
 import { SavedRoutingModule } from './saved-routing.module';
 import { SavedComponent } from './saved.component';
+import { NativeScriptUIListViewModule } from "nativescript-ui-listview/angular";
 
 @NgModule({
     imports: [
         NativeScriptCommonModule,
-        SavedRoutingModule
+        SavedRoutingModule,
+        NativeScriptUIListViewModule
     ],
     declarations: [
         SavedComponent

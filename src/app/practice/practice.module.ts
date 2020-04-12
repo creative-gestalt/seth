@@ -1,8 +1,9 @@
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { NativeScriptCommonModule } from 'nativescript-angular/common';
-
 import { PracticeRoutingModule } from './practice-routing.module';
-import { PracticeComponent } from './practice.component';
+
+import { PracticeElementComponent } from '~/app/practice/practice-elements/practice-element.component';
+import { DirectionsComponent } from '~/app/practice/directions/directions.component';
 
 @NgModule({
     imports: [
@@ -10,7 +11,8 @@ import { PracticeComponent } from './practice.component';
         PracticeRoutingModule
     ],
     declarations: [
-        PracticeComponent
+        PracticeElementComponent,
+        DirectionsComponent
     ],
     schemas: [
         NO_ERRORS_SCHEMA

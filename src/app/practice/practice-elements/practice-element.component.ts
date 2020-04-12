@@ -10,40 +10,28 @@ import * as app from 'tns-core-modules/application';
 import { Label } from 'tns-core-modules/ui/label';
 
 @Component({
-    selector: 'Exercises',
-    templateUrl: './exercises.component.html'
+    selector: 'Practice',
+    templateUrl: './practice-element.component.html'
 })
-export class ExercisesComponent implements OnInit {
-    exercises: Array<Exercises>;
-    sethSpeaks: Array<Exercises>;
-    sessionsOne: Array<Exercises>;
-    massEvents: Array<Exercises>;
-    personalReality: Array<Exercises>;
-    psyche: Array<Exercises>;
+export class PracticeElementComponent implements OnInit {
+    elements: Array<Exercises>;
     unknownOne: Array<Exercises>;
     unknownTwo: Array<Exercises>;
-    towardsHealth: Array<Exercises>;
     elevation: number;
 
     constructor(
         private _router: RouterExtensions,
         private _activatedRoute: ActivatedRoute,
-        private _exercises: DatabaseExercisesPractice
+        private _elements: DatabaseExercisesPractice
     ) {
     }
 
     ngOnInit(): void {
         this.elevation = 2;
-        this._exercises.fetchExercises().then((results) => {
-            this.exercises = results;
-            this.sethSpeaks         = this.exercises.filter((b) => b.book === BOOKS[0]);
-            this.sessionsOne        = this.exercises.filter((b) => b.book === BOOKS[1]);
-            this.massEvents         = this.exercises.filter((b) => b.book === BOOKS[2]);
-            this.personalReality    = this.exercises.filter((b) => b.book === BOOKS[3]);
-            this.psyche             = this.exercises.filter((b) => b.book === BOOKS[4]);
-            this.unknownOne         = this.exercises.filter((b) => b.book === BOOKS[5]);
-            this.unknownTwo         = this.exercises.filter((b) => b.book === BOOKS[6]);
-            this.towardsHealth      = this.exercises.filter((b) => b.book === BOOKS[7]);
+        this._elements.fetchPracticeElements().then((results) => {
+            this.elements = results;
+            this.unknownOne = this.elements.filter((b) => b.book === BOOKS[0]);
+            this.unknownTwo = this.elements.filter((b) => b.book === BOOKS[1]);
         });
     }
 
@@ -54,7 +42,7 @@ export class ExercisesComponent implements OnInit {
         }
     }
 
-    onExerciseTap(exArgs, directions, name) {
+    onElementTap(exArgs, directions, name) {
         this._router.navigate(['../directions', {directions, name}],
             {
                 transition: {

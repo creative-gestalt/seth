@@ -1,12 +1,13 @@
 <ActionBar class="material-action-bar">
     <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
     <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
-        ios.position="left">
+                ios.position="left">
     </ActionItem>
-    <Label text="Practice Elements"></Label>
+    <Label [text]="name"></Label>
 </ActionBar>
 
 <GridLayout class="page__content">
-    <Label class="page__content-icon fas" text="&#xf005;"></Label>
-    <Label class="page__content-placeholder" text="<!-- Page content goes here -->"></Label>
+    <ScrollView row="0">
+        <Label class="directions h3" [text]="directions"></Label>
+    </ScrollView>
 </GridLayout>
