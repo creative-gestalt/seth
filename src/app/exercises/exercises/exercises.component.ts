@@ -37,14 +37,14 @@ export class ExercisesComponent implements OnInit {
         this.elevation = 2;
         this._exercisesDatabase.fetch().then((results) => {
             this.exercises = results;
-            this.sethSpeaks = this.exercises.filter((b) => b.book === BOOKS[0]);
-            this.sessionsOne = this.exercises.filter((b) => b.book === BOOKS[1]);
-            this.massEvents = this.exercises.filter((b) => b.book === BOOKS[2]);
-            this.personalReality = this.exercises.filter((b) => b.book === BOOKS[3]);
-            this.psyche = this.exercises.filter((b) => b.book === BOOKS[4]);
-            this.unknownOne = this.exercises.filter((b) => b.book === BOOKS[5]);
-            this.unknownTwo = this.exercises.filter((b) => b.book === BOOKS[6]);
-            this.towardsHealth = this.exercises.filter((b) => b.book === BOOKS[7]);
+            this.sethSpeaks         = this.exercises.filter((b) => b.book === BOOKS[0]);
+            this.sessionsOne        = this.exercises.filter((b) => b.book === BOOKS[1]);
+            this.massEvents         = this.exercises.filter((b) => b.book === BOOKS[2]);
+            this.personalReality    = this.exercises.filter((b) => b.book === BOOKS[3]);
+            this.psyche             = this.exercises.filter((b) => b.book === BOOKS[4]);
+            this.unknownOne         = this.exercises.filter((b) => b.book === BOOKS[5]);
+            this.unknownTwo         = this.exercises.filter((b) => b.book === BOOKS[6]);
+            this.towardsHealth      = this.exercises.filter((b) => b.book === BOOKS[7]);
         });
     }
 
