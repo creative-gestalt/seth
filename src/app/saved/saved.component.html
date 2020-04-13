@@ -7,12 +7,39 @@
 </ActionBar>
 
 <GridLayout class="page__content">
-    <RadListView [items]="saved">
-        <ng-template let-item="item">
-            <StackLayout class="page__content-quotes">
-                <Label class="quote-text h3" [text]="item.quote"></Label>
-                <Label class="quote-book h4" [text]="item.book"></Label>
-            </StackLayout>
-        </ng-template>
+    <RadListView #savedList [items]="saved">
+        <ListViewLinearLayout tkListViewLayout
+                              scrollDirection="Vertical"
+                              itemInsertAnimation="Default"
+                              itemDeleteAnimation="Default">
+            <ng-template let-item="item">
+                <CardView class="page__content-quotes" [androidElevation]="cardElevation">
+                    <StackLayout>
+                        <Label *ngIf="!item.edit" class="quote-text h3" [text]="item.quote"></Label>
+                        <TextView *ngIf="item.edit" class="quote-text-edit h3" [(ngModel)]="newQuoteText"></TextView>
+
+                        <GridLayout columns="auto, *">
+                            <Label class="quote-book h4" col="0" [text]="item.book"></Label>
+
+                            <Button *ngIf="!item.edit" class="quote-edit text-center fas" col="1"
+                                    text="&#xf044;" [androidElevation]="buttonElevation"
+                                    (tap)="onEditQuote(item.quote); item.edit = !item.edit"></Button>
+
+                            <GridLayout col="1" columns="auto, auto" horizontalAlignment="right">
+                                <Button *ngIf="item.edit" class="quote-delete text-center fas" col="0"
+                                        text="&#xf2ed;" [androidElevation]="buttonElevation"
+                                        (tap)="onDeleteQuote($event); item.edit = !item.edit"></Button>
+
+                                <Button *ngIf="item.edit" class="quote-save text-center fas" col="1"
+                                        text="&#xf00c;" [androidElevation]="buttonElevation"
+                                        (tap)="onSaveQuote($event, newQuoteText); item.edit = !item.edit"></Button>
+
+                            </GridLayout>
+                        </GridLayout>
+
+                    </StackLayout>
+                </CardView>
+            </ng-template>
+        </ListViewLinearLayout>
     </RadListView>
 </GridLayout>

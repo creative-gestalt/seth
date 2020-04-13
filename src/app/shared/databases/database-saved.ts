@@ -8,10 +8,10 @@ export class DatabaseSaved {
     private isInstantiated: boolean;
 
     constructor() {
-        if (!sqlite.exists('saved.sqlite')) {
+        // if (!sqlite.exists('saved.sqlite')) {
             sqlite.copyDatabase('saved.sqlite');
             console.log('saved was created');
-        }
+        // }
         if (!this.isInstantiated) {
             (new sqlite('saved.sqlite')).then((db) => {
                 db.execSQL('CREATE TABLE IF NOT EXISTS saved (id INTEGER PRIMARY KEY AUTOINCREMENT, quote TEXT, book TEXT)').then((id) => {
@@ -51,13 +51,13 @@ export class DatabaseSaved {
 
     update(data: any): Promise<any> {
         return this.db.
-            execSQL('UPDATE saved SET quote = (?), book = (?) WHERE id = (?)',
-            [data.quote, data.book, data.id]);
+            execSQL('UPDATE saved SET quote = (?) WHERE id = (?)',
+            [data.quote,  data.id]);
     }
 
     fetchSavedQuotes(): Promise<any> {
         return new Promise((resolve, reject) => {
-            this.db.all('SELECT * FROM saved ORDER BY id').then((rows) => {
+            this.db.all('SELECT * FROM saved ORDER BY id DESC').then((rows) => {
                 const quotes = [];
                 for (const row in rows) {
                     quotes.push({

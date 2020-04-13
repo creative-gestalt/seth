@@ -41,13 +41,58 @@
   }
 
   &-quotes {
+    radius: 10;
+    margin: 10;
+    background-color: $overlay-02dp;
+
     .quote {
       &-text {
+        white-space: normal;
+        color: rgba(255, 255, 255, .87);
+      }
+
+      &-text-edit {
+        margin: 6;
+        padding: 0;
+        white-space: normal;
         color: rgba(255, 255, 255, .87);
       }
 
       &-book {
         color: rgba(255, 255, 255, .6);
+      }
+
+      &-edit {
+        width: 30;
+        height: 30;
+        font-size: 12;
+        font-weight: 300;
+        border-radius: 50%;
+        horizontal-align: right;
+        color: rgba(255, 255, 255, .6);
+        background-color: $overlay-06dp;
+      }
+
+      &-delete {
+        width: 30;
+        height: 30;
+        font-size: 12;
+        font-weight: 300;
+        border-radius: 50%;
+        horizontal-align: right;
+        color: rgba(255, 93, 93, 0.6);
+        background-color: $overlay-06dp;
+      }
+
+      &-save {
+        width: 30;
+        height: 30;
+        font-size: 12;
+        font-weight: 300;
+        border-radius: 50%;
+        horizontal-align: right;
+        color: rgba(107, 255, 93, 0.6);
+        background-color: $overlay-06dp;
       }
     }
   }
@@ -102,10 +147,11 @@
   color: rgba(255, 255, 255, .87);
 }
 
-.nt-drawer__header-image {
+.nt-drawer__header-icon {
+  margin-top: 20;
   color: gray;
-  height: 40em;
-  width: 40em;
+  height: 40;
+  width: 40;
 }
 
 .nt-drawer__list-item.-selected {

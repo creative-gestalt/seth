@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { DrawerTransitionBase, RadSideDrawer, SlideInOnTopTransition } from 'nativescript-ui-sidedrawer';
 import { DatabaseExercisesPractice } from '~/app/shared/databases/database-exercises-practice';
@@ -12,7 +12,7 @@ import { filter } from 'rxjs/operators';
     selector: 'ns-app',
     templateUrl: 'app.component.html'
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, AfterViewInit {
     private _activatedUrl: string;
     private _sideDrawerTransition: DrawerTransitionBase;
 
@@ -28,11 +28,14 @@ export class AppComponent implements OnInit {
     ngOnInit(): void {
         this._activatedUrl = '/search';
         this._sideDrawerTransition = new SlideInOnTopTransition();
-        this._page.backgroundColor = '#121212';
 
         this._router.events
         .pipe(filter((event: any) => event instanceof NavigationEnd))
         .subscribe((event: NavigationEnd) => this._activatedUrl = event.urlAfterRedirects);
+    }
+
+    ngAfterViewInit(): void {
+        this._page.backgroundColor = '#121212';
     }
 
     get sideDrawerTransition(): DrawerTransitionBase {
