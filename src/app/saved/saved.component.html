@@ -1,4 +1,4 @@
-<ActionBar class="material-action-bar">
+<ActionBar class="material-action-bar" [androidElevation]="actionBar">
     <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
     <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
                 ios.position="left">
@@ -7,13 +7,13 @@
 </ActionBar>
 
 <GridLayout class="page__content">
-    <RadListView #savedList [items]="saved">
+    <RadListView [items]="saved">
         <ListViewLinearLayout tkListViewLayout
                               scrollDirection="Vertical"
                               itemInsertAnimation="Default"
                               itemDeleteAnimation="Default">
             <ng-template let-item="item">
-                <CardView class="page__content-quotes" [androidElevation]="cardElevation">
+                <CardView class="card-quotes" [androidElevation]="cardElevation">
                     <StackLayout>
                         <Label *ngIf="!item.edit" class="quote-text h3" [text]="item.quote"></Label>
                         <TextView *ngIf="item.edit" class="quote-text-edit h3" [(ngModel)]="newQuoteText"></TextView>

@@ -1,5 +1,5 @@
 @import "~@nativescript/theme/core";
-@import "/_app-variables";
+@import "app-variables";
 
 // Font icon class
 .fab {
@@ -19,12 +19,12 @@
 
 // Common page class
 .material-action-bar {
-  background-color: #272727;
+  background-color: $overlay-04dp;
   color: rgba(255, 255, 255, 0.87);
 }
 
 .page__content {
-  background-color: #121212;
+  background-color: $background-dark;
 
   &-icon,
   &-placeholder {
@@ -40,7 +40,37 @@
     margin-top: 20%;
   }
 
-  &-quotes {
+  .exercise {
+    width: 95%;
+    background-color: $overlay-01dp;
+
+    &-title {
+      width: 99%;
+      height: 55em;
+      font-size: 14;
+      padding-left: 15em;
+      color: $white-high;
+      vertical-align: center;
+      border-bottom-width: 1px;
+      border-bottom-color: $overlay-24dp;
+    }
+  }
+
+  .book-category {
+    font-size: 18;
+    padding: 20em;
+    padding-left: 10em;
+    color: $white-high;
+  }
+
+  .directions {
+    padding: 15em;
+    line-height: 3.5em;
+    white-space: normal;
+    color: $white-high;
+  }
+
+  .card-quotes {
     radius: 10;
     margin: 10;
     background-color: $overlay-02dp;
@@ -52,14 +82,14 @@
       }
 
       &-text-edit {
-        margin: 6;
+        margin: 5;
         padding: 0;
         white-space: normal;
         color: rgba(255, 255, 255, .87);
       }
 
       &-book {
-        color: rgba(255, 255, 255, .6);
+        color: $white-medium;
       }
 
       &-edit {
@@ -69,7 +99,7 @@
         font-weight: 300;
         border-radius: 50%;
         horizontal-align: right;
-        color: rgba(255, 255, 255, .6);
+        color: $white-medium;
         background-color: $overlay-06dp;
       }
 
@@ -96,55 +126,34 @@
       }
     }
   }
-
-  .exercise {
-    width: 95%;
-    border-radius: 5px;
-    background-color: $overlay-01dp;
-    separator-color: $overlay-24dp;
-
-    &-title {
-      height: 55em;
-      padding-left: 15em;
-      color: rgba(255, 255, 255, .87);
-      vertical-align: center;
-      //border-top-width: 1px;
-      border-bottom-width: 1px;
-      //border-top-color: $overlay-12dp;
-      border-bottom-color: $overlay-12dp;
-    }
-  }
-
-  .book-category {
-    padding-left: 10em;
-    padding: 20em;
-    color: rgba(255, 255, 255, .87);
-  }
-
-  .directions {
-    padding: 15em;
-    line-height: 3.5em;
-    white-space: normal;
-    color: rgba(255, 255, 255, .87);
-  }
 }
 
 // Drawer navigation custom styles
-.nt-drawer__header {
+.nt-drawer__header-background {
+  width: 100%;
+  vertical-align: top;
+  padding: 35 0;
   background-color: $overlay-04dp;
+
+  Label {
+    padding: 0;
+    padding-top: 10;
+    font-size: 18;
+    text-align: center;
+  }
 }
 
 .nt-drawer__body {
+  color: $white-high;
   background-color: $background-dark;
-  color: rgba(255, 255, 255, .87);
 }
 
 .nt-drawer__header-brand {
-  color: rgba(255, 255, 255, .87);
+  color: $white-high;
 }
 
 .nt-drawer__header-footnote {
-  color: rgba(255, 255, 255, .87);
+  color: $white-high;
 }
 
 .nt-drawer__header-icon {
@@ -158,6 +167,6 @@
   background-color: rgba(255, 255, 255, .25);
 
   Label {
-    color: rgba(255, 255, 255, .87);
+    color: $white-high;
   }
 }

@@ -1,20 +1,19 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ObservableArray } from 'tns-core-modules/data/observable-array';
 import { DatabaseSaved } from '~/app/shared/databases/database-saved';
 import { Saved } from '~/app/saved/interfaces/saved.interface';
 import { RadSideDrawer } from 'nativescript-ui-sidedrawer';
 import * as app from 'tns-core-modules/application';
-import { Page } from 'tns-core-modules/ui/page';
 
 @Component({
     selector: 'Saved',
     templateUrl: './saved.component.html'
 })
 export class SavedComponent implements OnInit {
+    actionBar: number;
     cardElevation: number;
     buttonElevation: number;
     newQuoteText: string;
-    @ViewChild('savedList', {static: false}) savedList: ElementRef;
 
     get saved(): ObservableArray<Saved> {
         return this._saved;
@@ -23,12 +22,12 @@ export class SavedComponent implements OnInit {
     private _saved: ObservableArray<Saved>;
 
     constructor(
-        private _page: Page,
         private _savedQuotes: DatabaseSaved
     ) {
     }
 
     ngOnInit(): void {
+        this.actionBar = 4;
         this.cardElevation = 2;
         this.buttonElevation = 6;
         this._savedQuotes.fetchSavedQuotes().then((results) => {

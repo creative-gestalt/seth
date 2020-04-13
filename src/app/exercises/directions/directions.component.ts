@@ -10,6 +10,7 @@ import { ActivatedRoute } from '@angular/router';
     templateUrl: './directions.component.html'
 })
 export class DirectionsComponent {
+    actionBar: number;
     directions: string;
     name: string;
 
@@ -18,6 +19,7 @@ export class DirectionsComponent {
         private _activatedRoute: ActivatedRoute,
         private _exercisesDatabase: DatabaseExercisesPractice
     ) {
+        this.actionBar = 4;
         this._activatedRoute.params.subscribe((params) => {
             this.directions = params.directions;
             this.name = params.name;

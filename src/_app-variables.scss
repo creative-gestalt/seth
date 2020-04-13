@@ -1,7 +1,5 @@
 // Material layers
 $background-dark: #121212;
-$background-light: #f4f4f4;
-$overlay-white: #ffffff;
 $overlay-01dp: #1E1E1E;
 $overlay-02dp: #232323;
 $overlay-03dp: #252525;
@@ -11,4 +9,7 @@ $overlay-08dp: #2F2F2F;
 $overlay-12dp: #333333;
 $overlay-16dp: #353535;
 $overlay-24dp: #383838;
-$text-light-mode: #121212;
+
+$white-high: rgba(255, 255, 255, .87);
+$white-medium: rgba(255, 255, 255, .6);
+$white-disabled: rgba(255, 255, 255, .4);

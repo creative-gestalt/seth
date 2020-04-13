@@ -14,6 +14,9 @@ import { Label } from 'tns-core-modules/ui/label';
     templateUrl: './exercises.component.html'
 })
 export class ExercisesComponent implements OnInit {
+    actionBar: number;
+    cardElevation: number;
+    buttonElevation: number;
     exercises: Array<Exercises>;
     sethSpeaks: Array<Exercises>;
     sessionsOne: Array<Exercises>;
@@ -23,7 +26,6 @@ export class ExercisesComponent implements OnInit {
     unknownOne: Array<Exercises>;
     unknownTwo: Array<Exercises>;
     towardsHealth: Array<Exercises>;
-    elevation: number;
 
     constructor(
         private _router: RouterExtensions,
@@ -33,7 +35,9 @@ export class ExercisesComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.elevation = 2;
+        this.actionBar = 4;
+        this.cardElevation = 2;
+        this.buttonElevation = 6;
         this._exercises.fetchExercises().then((results) => {
             this.exercises = results;
             this.sethSpeaks         = this.exercises.filter((b) => b.book === BOOKS[0]);

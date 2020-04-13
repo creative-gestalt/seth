@@ -14,10 +14,12 @@ import { Label } from 'tns-core-modules/ui/label';
     templateUrl: './practice-element.component.html'
 })
 export class PracticeElementComponent implements OnInit {
+    actionBar: number;
+    cardElevation: number;
+    buttonElevation: number;
     elements: Array<Exercises>;
     unknownOne: Array<Exercises>;
     unknownTwo: Array<Exercises>;
-    elevation: number;
 
     constructor(
         private _router: RouterExtensions,
@@ -27,7 +29,9 @@ export class PracticeElementComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.elevation = 2;
+        this.actionBar = 4;
+        this.cardElevation = 2;
+        this.buttonElevation = 6;
         this._elements.fetchPracticeElements().then((results) => {
             this.elements = results;
             this.unknownOne = this.elements.filter((b) => b.book === BOOKS[5]);

@@ -6,7 +6,8 @@
     <Label text="Settings"></Label>
 </ActionBar>
 
-<GridLayout class="page__content">
-    <Label class="page__content-icon fas" text="&#xf013;"></Label>
-    <Label class="page__content-placeholder" text="<!-- Page content goes here -->"></Label>
-</GridLayout>
+<StackLayout class="page__content">
+    <Button text="GRAY" (tap)="onGrayTap()"></Button>
+    <Button text="RED" (tap)="onRedTap()"></Button>
+    <Button text="BLUE" (tap)="onBlueTap()"></Button>
+</StackLayout>

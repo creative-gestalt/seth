@@ -8,15 +8,20 @@ import { isAndroid } from 'tns-core-modules/platform';
     templateUrl: './search.component.html'
 })
 export class SearchComponent implements OnInit {
-    testText: string;
     source: string;
+    actionBar: number;
+    cardElevation: number;
+    buttonElevation: number;
 
-    constructor() {
+    constructor(
+        ) {
         this.source = 'https://findingseth.com/q/';
     }
 
     ngOnInit(): void {
-        // Init your component properties here.
+        this.actionBar = 4;
+        this.cardElevation = 2;
+        this.buttonElevation = 6;
     }
 
     getRequest() {

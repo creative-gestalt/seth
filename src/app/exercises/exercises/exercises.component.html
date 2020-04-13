@@ -1,4 +1,4 @@
-<ActionBar class="material-action-bar">
+<ActionBar class="material-action-bar" [androidElevation]="actionBar">
     <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
     <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
                 ios.position="left">
@@ -10,56 +10,56 @@
     <StackLayout>
         <Label class="book-category" text="Seth Speaks"></Label>
 
-        <StackLayout class="exercise" *ngFor="let exercise of sethSpeaks" [androidElevation]="elevation">
+        <StackLayout class="exercise" *ngFor="let exercise of sethSpeaks" [androidElevation]="cardElevation">
             <Label (loaded)="onLabelLoaded($event)" class="exercise-title" [text]="exercise.name"
                    (tap)="onExerciseTap($event, exercise.directions, exercise.name)"></Label>
         </StackLayout>
 
         <Label class="book-category" text="The Early Sessions, Book 1"></Label>
 
-        <StackLayout class="exercise" *ngFor="let exercise of sessionsOne" [androidElevation]="elevation">
+        <StackLayout class="exercise" *ngFor="let exercise of sessionsOne" [androidElevation]="cardElevation">
             <Label (loaded)="onLabelLoaded($event)" class="exercise-title" [text]="exercise.name"
                    (tap)="onExerciseTap($event, exercise.directions, exercise.name)"></Label>
         </StackLayout>
 
         <Label class="book-category" text="The Individual and the Nature of Mass Events"></Label>
 
-        <StackLayout class="exercise" *ngFor="let exercise of massEvents" [androidElevation]="elevation">
+        <StackLayout class="exercise" *ngFor="let exercise of massEvents" [androidElevation]="cardElevation">
             <Label (loaded)="onLabelLoaded($event)" class="exercise-title" [text]="exercise.name"
                    (tap)="onExerciseTap($event, exercise.directions, exercise.name)"></Label>
         </StackLayout>
 
         <Label class="book-category" text="The Nature of Personal Reality"></Label>
 
-        <StackLayout class="exercise" *ngFor="let exercise of personalReality" [androidElevation]="elevation">
+        <StackLayout class="exercise" *ngFor="let exercise of personalReality" [androidElevation]="cardElevation">
             <Label (loaded)="onLabelLoaded($event)" class="exercise-title" [text]="exercise.name"
                    (tap)="onExerciseTap($event, exercise.directions, exercise.name)"></Label>
         </StackLayout>
 
         <Label class="book-category" text="The Nature of the Psyche"></Label>
 
-        <StackLayout class="exercise" *ngFor="let exercise of psyche" [androidElevation]="elevation">
+        <StackLayout class="exercise" *ngFor="let exercise of psyche" [androidElevation]="cardElevation">
             <Label (loaded)="onLabelLoaded($event)" class="exercise-title" [text]="exercise.name"
                    (tap)="onExerciseTap($event, exercise.directions, exercise.name)"></Label>
         </StackLayout>
 
         <Label class="book-category" text="The Unknown Reality Volume 1"></Label>
 
-        <StackLayout class="exercise" *ngFor="let exercise of unknownOne" [androidElevation]="elevation">
+        <StackLayout class="exercise" *ngFor="let exercise of unknownOne" [androidElevation]="cardElevation">
             <Label (loaded)="onLabelLoaded($event)" class="exercise-title" [text]="exercise.name"
                    (tap)="onExerciseTap($event, exercise.directions, exercise.name)"></Label>
         </StackLayout>
 
         <Label class="book-category" text="The Unknown Reality Volume 2"></Label>
 
-        <StackLayout class="exercise" *ngFor="let exercise of unknownTwo" [androidElevation]="elevation">
+        <StackLayout class="exercise" *ngFor="let exercise of unknownTwo" [androidElevation]="cardElevation">
             <Label (loaded)="onLabelLoaded($event)" class="exercise-title" [text]="exercise.name"
                    (tap)="onExerciseTap($event, exercise.directions, exercise.name)"></Label>
         </StackLayout>
 
         <Label class="book-category" text="The Way Towards Health"></Label>
 
-        <StackLayout class="exercise" *ngFor="let exercise of towardsHealth" [androidElevation]="elevation">
+        <StackLayout class="exercise" *ngFor="let exercise of towardsHealth" [androidElevation]="cardElevation">
             <Label (loaded)="onLabelLoaded($event)" class="exercise-title" [text]="exercise.name"
                    (tap)="onExerciseTap($event, exercise.directions, exercise.name)"></Label>
         </StackLayout>

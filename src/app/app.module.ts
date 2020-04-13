@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { DatabaseExercisesPractice } from '~/app/shared/databases/database-exercises-practice';
 import { DatabaseSaved } from '~/app/shared/databases/database-saved';
 import { AppComponent } from './app.component';
+import { ThemeService } from '~/app/shared/services/theme.service';
 
 @NgModule({
     bootstrap: [
@@ -23,7 +24,8 @@ import { AppComponent } from './app.component';
     ],
     providers: [
         DatabaseExercisesPractice,
-        DatabaseSaved
+        DatabaseSaved,
+        ThemeService
     ],
     schemas: [
         NO_ERRORS_SCHEMA
