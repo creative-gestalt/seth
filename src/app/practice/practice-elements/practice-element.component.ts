@@ -4,7 +4,7 @@ import { DatabaseExercisesPractice } from '~/app/shared/databases/database-exerc
 import { Exercises } from '~/app/shared/interfaces/exercises.interface';
 import { RouterExtensions } from 'nativescript-angular/router';
 import { RadSideDrawer } from 'nativescript-ui-sidedrawer';
-import { BOOKS } from '~/app/exercises/exercises/books';
+import { BOOKS } from '~/app/shared/components/books';
 import { isAndroid } from 'tns-core-modules/platform';
 import * as app from 'tns-core-modules/application';
 import { Label } from 'tns-core-modules/ui/label';
@@ -30,8 +30,8 @@ export class PracticeElementComponent implements OnInit {
         this.elevation = 2;
         this._elements.fetchPracticeElements().then((results) => {
             this.elements = results;
-            this.unknownOne = this.elements.filter((b) => b.book === BOOKS[0]);
-            this.unknownTwo = this.elements.filter((b) => b.book === BOOKS[1]);
+            this.unknownOne = this.elements.filter((b) => b.book === BOOKS[5]);
+            this.unknownTwo = this.elements.filter((b) => b.book === BOOKS[6]);
         });
     }
 

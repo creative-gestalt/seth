@@ -1,11 +1,11 @@
 {
   "nativescript": {
     "id": "com.creativegestalt.seth",
-    "tns-android": {
-      "version": "6.4.1"
-    },
     "tns-ios": {
-      "version": "6.4.0"
+      "version": "6.5.0"
+    },
+    "tns-android": {
+      "version": "6.5.0"
     }
   },
   "description": "NativeScript Application",
@@ -30,7 +30,7 @@
     "nativescript-ui-sidedrawer": "~8.0.0",
     "reflect-metadata": "~0.1.12",
     "rxjs": "^6.4.0",
-    "tns-core-modules": "~6.4.0",
+    "tns-core-modules": "~6.5.0",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
