@@ -19,6 +19,7 @@
 
 // Common page class
 .material-action-bar {
+  margin-top: -24;
   background-color: $overlay-04dp;
   color: rgba(255, 255, 255, 0.87);
 }
@@ -124,6 +125,23 @@
         color: rgba(107, 255, 93, 0.6);
         background-color: $overlay-06dp;
       }
+    }
+  }
+
+  .color {
+    margin-top: 20;
+    margin-bottom: 35;
+
+    &-title {
+      margin-top: 65;
+      color: $white-high;
+    }
+
+    &-button {
+      width: 50;
+      height: 50;
+      border-radius: 50%;
+      color: $white-high;
     }
   }
 }

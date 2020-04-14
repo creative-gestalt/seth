@@ -8,6 +8,7 @@ import { RouterExtensions } from 'nativescript-angular/router';
 import * as app from 'tns-core-modules/application';
 import { filter } from 'rxjs/operators';
 import { setString, getString } from 'tns-core-modules/application-settings';
+import { Color } from 'tns-core-modules/color';
 
 @Component({
     selector: 'ns-app',
@@ -27,6 +28,7 @@ export class AppComponent implements OnInit {
     }
 
     ngOnInit(): void {
+        this.setStatusBarAndNavBarColor();
         this._activatedUrl = '/search';
         this._sideDrawerTransition = new SlideInOnTopTransition();
         switch (getString('color')) {
@@ -35,6 +37,9 @@ export class AppComponent implements OnInit {
                 break;
             case 'red':
                 app.addCss(this._theme.redTheme);
+                break;
+            case 'teal':
+                app.addCss(this._theme.tealTheme);
                 break;
         }
 
@@ -60,5 +65,11 @@ export class AppComponent implements OnInit {
 
         const sideDrawer = <RadSideDrawer>app.getRootView();
         sideDrawer.closeDrawer();
+    }
+
+    private setStatusBarAndNavBarColor() {
+        const window = app.android.startActivity.getWindow();
+        window.setNavigationBarColor(new Color('#121212').android);
+        window.setStatusBarColor(new Color('#121212').android);
     }
 }

@@ -1,13 +1,21 @@
 <ActionBar class="material-action-bar">
     <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
     <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
-        ios.position="left">
+                ios.position="left">
     </ActionItem>
     <Label text="Settings"></Label>
 </ActionBar>
 
-<StackLayout class="page__content">
-    <Button text="GRAY" (tap)="onGrayTap()"></Button>
-    <Button text="RED" (tap)="onRedTap()"></Button>
-    <Button text="BLUE" (tap)="onBlueTap()"></Button>
+<StackLayout class="page__content" orientation="horizontal">
+    <GridLayout rows="*, auto, *" verticalAlignment="bottom">
+            <Label row="0" class="color-title h2" text="Pick a theme color" horizontalAlignment="center"></Label>
+
+            <StackLayout row="1" class="hr"></StackLayout>
+
+            <StackLayout row="2" class="color" orientation="horizontal" horizontalAlignment="center">
+                <Button class="color-button" text="GRAY" (tap)="onGrayTap()" backgroundColor="#383838"></Button>
+                <Button class="color-button" text="RED" (tap)="onRedTap()" backgroundColor="#4B0E0E"></Button>
+                <Button class="color-button" text="TEAL" (tap)="onBlueTap()" backgroundColor="#0E484B"></Button>
+            </StackLayout>
+    </GridLayout>
 </StackLayout>

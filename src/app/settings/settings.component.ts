@@ -4,7 +4,6 @@ import * as app from 'tns-core-modules/application';
 import { setString, getString } from 'tns-core-modules/application-settings';
 import { Page } from 'tns-core-modules/ui/page/page';
 import { ThemeService } from '~/app/shared/services/theme.service';
-import { GRAY, RED } from '~/app/shared/themes/colors';
 
 @Component({
     selector: 'Settings',
@@ -16,11 +15,10 @@ export class SettingsComponent implements OnInit {
         private _page: Page,
         private _theme: ThemeService
     ) {
-        // Use the component constructor to inject providers.
     }
 
     ngOnInit(): void {
-        // Init your component properties here.
+        // don't need anything here yet
     }
 
     onGrayTap(): void {
@@ -34,8 +32,8 @@ export class SettingsComponent implements OnInit {
     }
 
     onBlueTap(): void {
-        setString('color', 'blue');
-        app.addCss(this._theme.blueTheme);
+        setString('color', 'teal');
+        app.addCss(this._theme.tealTheme);
     }
 
     onDrawerButtonTap(): void {

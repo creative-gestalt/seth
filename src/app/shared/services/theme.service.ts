@@ -30,7 +30,7 @@ export class ThemeService {
          .nt-drawer__header-background {background-color:               ${RED['overlay-04dp']}}
          .nt-drawer__body {background-color:                            ${RED['background-dark']}}`;
 
-    blueTheme =
+    tealTheme =
         `.material-action-bar {background-color:                        ${BLUE['overlay-06dp']}}
          .page__content {background-color:                              ${BLUE['background-dark']}}
          .page__content .exercise {background-color:                    ${BLUE['overlay-01dp']}}
