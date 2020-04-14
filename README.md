@@ -16,7 +16,7 @@ Allow saving and editing results obtained by the search engine.
 Have an about section with information about the author.
 
 
-<img src="https://github.com/creative-gestalt/seth/blob/screenshots/search.png" height="100"> ![alt text](https://github.com/creative-gestalt/seth/blob/master/screenshots/drawer.png) ![alt text](https://github.com/creative-gestalt/seth/blob/master/screenshots/exercises.png)
+<img src="/screenshots/search.png" height="300"> <img src="/screenshots/drawer.png" height="300"> ![alt text](https://github.com/creative-gestalt/seth/blob/master/screenshots/exercises.png)
 
 ![alt text](https://github.com/creative-gestalt/seth/blob/master/screenshots/directions.png) ![alt text](https://github.com/creative-gestalt/seth/blob/master/screenshots/practice.png) ![alt text](https://github.com/creative-gestalt/seth/blob/master/screenshots/saved_gray.jpg)
 
