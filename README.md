@@ -16,6 +16,8 @@ Allow saving and editing results obtained by the search engine.
 Have an about section with information about the author.
 
 
-![alt text](https://github.com/creative-gestalt/seth/blob/master/screenshots/search.jpg) ![alt text](https://github.com/creative-gestalt/seth/blob/master/screenshots/drawer.jpg) ![alt text](https://github.com/creative-gestalt/seth/blob/master/screenshots/exercises_1.jpg)
+![alt text](https://github.com/creative-gestalt/seth/blob/master/screenshots/search.png) ![alt text](https://github.com/creative-gestalt/seth/blob/master/screenshots/drawer.png) ![alt text](https://github.com/creative-gestalt/seth/blob/master/screenshots/exercises.png)
 
-![alt text](https://github.com/creative-gestalt/seth/blob/master/screenshots/exercises_2.jpg) ![alt text](https://github.com/creative-gestalt/seth/blob/master/screenshots/saved_3.jpg) ![alt text](https://github.com/creative-gestalt/seth/blob/master/screenshots/directions_2.jpg)
+![alt text](https://github.com/creative-gestalt/seth/blob/master/screenshots/directions.png) ![alt text](https://github.com/creative-gestalt/seth/blob/master/screenshots/practice.png) ![alt text](https://github.com/creative-gestalt/seth/blob/master/screenshots/saved_gray.jpg)
+
+![alt text](https://github.com/creative-gestalt/seth/blob/master/screenshots/saved_teal.png) ![alt text](https://github.com/creative-gestalt/seth/blob/master/screenshots/saved_red.png)
