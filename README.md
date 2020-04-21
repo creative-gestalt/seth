@@ -20,4 +20,4 @@ Have an about section with information about the author.
 
 <img src="/screenshots/directions.png" height="600"> <img src="/screenshots/practice.png" height="600"> <img src="/screenshots/saved_gray.png" height="600">
 
-<img src="/screenshots/saved_teal.png" height="600"> <img src="/screenshots/directions_red.png" height="600">
+<img src="/screenshots/saved_teal.png" height="600"> <img src="/screenshots/directions_red.png" height="600"> <img src="/screenshots/gallery.jpg" height="600">
