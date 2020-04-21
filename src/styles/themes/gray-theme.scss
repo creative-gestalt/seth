@@ -3,36 +3,47 @@
 .material-action-bar {
   background-color: $overlay-06dp;
 }
+
 .page__content {
   background-color: $background-dark;
 
-  & .exercise {
+  .exercise {
     background-color: $overlay-01dp;
   }
 
-  & .exercise-title {
+  .exercise-title {
     border-bottom-color: $overlay-24dp;
   }
 
-  & .card-quotes {
+  .card-quotes {
     background-color: $overlay-02dp;
 
-    & .quote-edit {
+    .quote-edit {
       background-color: $overlay-06dp;
     }
 
-    & .quote-delete {
+    .quote-delete {
       background-color: $overlay-06dp;
     }
 
-    & .quote-save {
+    .quote-save {
       background-color: $overlay-06dp;
     }
   }
+
+  .new-picture-btn {
+    background-color: $overlay-06dp;
+  }
 }
+
 .nt-drawer__header-background {
   background-color: $overlay-04dp;
 }
+
 .nt-drawer__body {
   background-color: $background-dark;
+}
+
+.nt-drawer__list-item.-selected {
+  background-color: rgba(115, 115, 115, 0.1);
 }

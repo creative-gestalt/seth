@@ -6,28 +6,32 @@
 .page__content {
   background-color: $background-dark-red;
 
-  & .exercise {
+  .exercise {
     background-color: $overlay-01dp-red;
   }
 
-  & .exercise-title {
+  .exercise-title {
     border-bottom-color: $overlay-24dp-red;
   }
 
-  & .card-quotes {
+  .card-quotes {
     background-color: $overlay-02dp-red;
 
-    & .quote-edit {
+    .quote-edit {
       background-color: $overlay-06dp-red;
     }
 
-    & .quote-delete {
+    .quote-delete {
       background-color: $overlay-06dp-red;
     }
 
-    & .quote-save {
+    .quote-save {
       background-color: $overlay-06dp-red;
     }
+  }
+
+  .new-picture-btn {
+    background-color: $overlay-06dp-red;
   }
 }
 .nt-drawer__header-background {
@@ -35,4 +39,8 @@
 }
 .nt-drawer__body {
   background-color: $background-dark-red;
+}
+
+.nt-drawer__list-item.-selected {
+  background-color: rgba(255, 0, 0, .15);
 }

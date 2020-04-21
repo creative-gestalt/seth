@@ -43,7 +43,7 @@ export class PictureComponent implements OnInit {
         this.path = '';
         file.remove().then(
             () => {
-                alert('Picture was deleted');
+                console.log('Picture was deleted');
             }, (error) => {
                 console.log('Error -> ' + error.message);
             }

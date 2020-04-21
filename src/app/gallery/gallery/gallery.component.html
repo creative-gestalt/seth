@@ -3,21 +3,21 @@
     <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
                 ios.position="left">
     </ActionItem>
-    <Label text="Camera"></Label>
+    <Label text="Gallery"></Label>
 </ActionBar>
 
-<GridLayout class="page__content" (loaded)="onLoaded()">
-    <StackLayout>
+<GridLayout class="page__content" padding="5" (loaded)="onLoaded()">
 
-        <RadListView #list [items]="gallery" height="80%">
-            <ListViewGridLayout tkListViewLayout spanCount="3">
-                <ng-template let-pic="item">
-                    <Image (tap)="onPictureTap($event, pic.name, pic.path)"
-                           [src]="pic.path" margin="5"></Image>
-                </ng-template>
-            </ListViewGridLayout>
-        </RadListView>
-        <Button text="open camera" (tap)="onTakePicture()"></Button>
+    <RadListView #list [items]="gallery" height="100%">
+        <ListViewGridLayout tkListViewLayout spanCount="4">
+            <ng-template let-pic="item">
+                <GridLayout margin="5">
+                    <Image class="gallery-thumbnail" (tap)="onPictureTap($event, pic.name, pic.path)"
+                           [src]="pic.path" stretch="aspectFill"></Image>
+                </GridLayout>
+            </ng-template>
+        </ListViewGridLayout>
+    </RadListView>
 
-    </StackLayout>
+    <Button class="new-picture-btn" text="+" (tap)="onTakePicture()"></Button>
 </GridLayout>

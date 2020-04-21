@@ -144,6 +144,25 @@
       color: $white-high;
     }
   }
+
+  .new-picture-btn {
+    padding: 0;
+    width: 60;
+    height: 60;
+    margin: 25;
+    font-size: 45;
+    border-radius: 50%;
+    color: $white-high;
+    vertical-align: bottom;
+    horizontal-align: right;
+    background-color: $overlay-06dp;
+  }
+
+  .gallery-thumbnail {
+    width: 100;
+    height: 100;
+    border-radius: 2;
+  }
 }
 
 // Drawer navigation custom styles
@@ -182,7 +201,7 @@
 }
 
 .nt-drawer__list-item.-selected {
-  background-color: rgba(255, 255, 255, .25);
+  background-color: rgba(115, 115, 115, 0.15);
 
   Label {
     color: $white-high;

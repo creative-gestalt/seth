@@ -8,6 +8,7 @@ import { DatabaseExercisesPractice } from '~/app/shared/databases/database-exerc
 import { DatabaseSaved } from '~/app/shared/databases/database-saved';
 import { AppComponent } from './app.component';
 import { ThemeService } from '~/app/shared/services/theme.service';
+import { GalleryService } from '~/app/shared/services/gallery.service';
 
 @NgModule({
     bootstrap: [
@@ -25,7 +26,8 @@ import { ThemeService } from '~/app/shared/services/theme.service';
     providers: [
         DatabaseExercisesPractice,
         DatabaseSaved,
-        ThemeService
+        ThemeService,
+        GalleryService
     ],
     schemas: [
         NO_ERRORS_SCHEMA
