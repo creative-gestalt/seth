@@ -10,7 +10,7 @@ import * as app from 'tns-core-modules/application';
 import * as fs from 'tns-core-modules/file-system';
 import { ActivatedRoute } from '@angular/router';
 import * as camera from 'nativescript-camera';
-import { ImageCropper } from 'nativescript-imagecropper';
+import { ImageCropper, OptionsAndroid } from 'nativescript-imagecropper';
 
 @Component({
     selector: 'Camera',
@@ -66,13 +66,18 @@ export class GalleryComponent implements OnInit {
     }
 
     onTakePicture(): void {
+        const options = { lockSquare: true };
+        const androidOptions: OptionsAndroid = {
+            isFreeStyleCropEnabled: true,
+            statusBarColor: '#121212'
+        };
         camera.takePicture({saveToGallery: false})
             .then((imageAsset) => {
                 ImageSource.fromAsset(imageAsset).then((result) => {
                     const imageSource = result;
 
                     const imageCropper = new ImageCropper();
-                    imageCropper.show(imageSource).then((args) => {
+                    imageCropper.show(imageSource, options, androidOptions).then((args) => {
                         console.log(args);
                         if (args.image !== null) {
                             this.imageSource = args.image;
