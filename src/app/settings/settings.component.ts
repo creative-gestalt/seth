@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RadSideDrawer } from 'nativescript-ui-sidedrawer';
 import * as app from 'tns-core-modules/application';
-import { setString, getString } from 'tns-core-modules/application-settings';
+import { setString } from 'tns-core-modules/application-settings';
 import { Page } from 'tns-core-modules/ui/page/page';
 import { ThemeService } from '~/app/shared/services/theme.service';
 
@@ -31,7 +31,7 @@ export class SettingsComponent implements OnInit {
         app.addCss(this._theme.redTheme);
     }
 
-    onBlueTap(): void {
+    onTealTap(): void {
         setString('color', 'teal');
         app.addCss(this._theme.tealTheme);
     }

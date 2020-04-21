@@ -1,0 +1,38 @@
+@import "../../app-variables";
+
+.material-action-bar {
+  background-color: $overlay-06dp-teal;
+}
+.page__content {
+  background-color: $background-dark-teal;
+
+  & .exercise {
+    background-color: $overlay-01dp-teal;
+  }
+
+  & .exercise-title {
+    background-color: $overlay-24dp-teal;
+  }
+
+  & .card-quotes {
+    background-color: $overlay-02dp-teal;
+
+    & .quote-edit {
+      background-color: $overlay-06dp-teal;
+    }
+
+    & .quote-delete {
+      background-color: $overlay-06dp-teal;
+    }
+
+    & .quote-save {
+      background-color: $overlay-06dp-teal;
+    }
+  }
+}
+.nt-drawer__header-background {
+  background-color: $overlay-04dp-teal;
+}
+.nt-drawer__body {
+  background-color: $background-dark-teal;
+}

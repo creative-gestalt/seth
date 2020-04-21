@@ -1,0 +1,23 @@
+<ActionBar class="material-action-bar" [androidElevation]="actionBar">
+    <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+    <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
+                ios.position="left">
+    </ActionItem>
+    <Label text="Camera"></Label>
+</ActionBar>
+
+<GridLayout class="page__content" (loaded)="onLoaded()">
+    <StackLayout>
+
+        <RadListView #list [items]="gallery" height="80%">
+            <ListViewGridLayout tkListViewLayout spanCount="3">
+                <ng-template let-pic="item">
+                    <Image (tap)="onPictureTap($event, pic.name, pic.path)"
+                           [src]="pic.path" margin="5"></Image>
+                </ng-template>
+            </ListViewGridLayout>
+        </RadListView>
+        <Button text="open camera" (tap)="onTakePicture()"></Button>
+
+    </StackLayout>
+</GridLayout>

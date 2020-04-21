@@ -33,6 +33,12 @@
                 </GridLayout>
 
                 <GridLayout columns="auto, *" class="nt-drawer__list-item"
+                            [class.-selected]="isComponentSelected('/gallery')" (tap)="onNavItemTap('/gallery')">
+                    <Label col="0" text="&#xf005;" class="nt-icon fas"></Label>
+                    <Label col="1" text="Camera" class="p-r-10"></Label>
+                </GridLayout>
+
+                <GridLayout columns="auto, *" class="nt-drawer__list-item"
                             [class.-selected]="isComponentSelected('/about')" (tap)="onNavItemTap('/about')">
                     <Label col="0" text="&#xf02d;" class="nt-icon fas"></Label>
                     <Label col="1" text="About Seth" class="p-r-10"></Label>

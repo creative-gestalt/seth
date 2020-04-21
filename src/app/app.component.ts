@@ -7,7 +7,7 @@ import { ThemeService } from '~/app/shared/services/theme.service';
 import { RouterExtensions } from 'nativescript-angular/router';
 import * as app from 'tns-core-modules/application';
 import { filter } from 'rxjs/operators';
-import { setString, getString } from 'tns-core-modules/application-settings';
+import { getString } from 'tns-core-modules/application-settings';
 import { Color } from 'tns-core-modules/color';
 
 @Component({
@@ -20,10 +20,10 @@ export class AppComponent implements OnInit {
 
     constructor(
         private _router: Router,
+        private _theme: ThemeService,
         private _saved: DatabaseSaved,
         private _routerExtensions: RouterExtensions,
-        private _exercisePractice: DatabaseExercisesPractice,
-        private _theme: ThemeService
+        private _exercisePractice: DatabaseExercisesPractice
     ) {
     }
 
