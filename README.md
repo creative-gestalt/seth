@@ -13,6 +13,8 @@ Contain the practice elements from the Unknown Reality volumes.
 
 Allow saving and editing results obtained by the search engine.
 
+Use the phone's camera to take pictures of physical book passages, and keep them in a gallery.
+
 Have an about section with information about the author.
 
 
