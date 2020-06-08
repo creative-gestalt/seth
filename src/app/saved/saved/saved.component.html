@@ -42,4 +42,19 @@
             </ng-template>
         </ListViewLinearLayout>
     </RadListView>
+
+    <Button class="new-btn" text="+" (tap)="onNewDock(newDock)" [androidelevation]="buttonElevation"></Button>
+
+    <AbsoluteLayout #fadeLayer
+                    width="100%"
+                    height="100%"
+                    [backgroundColor]="'rgba(0,0,0,.7)'"
+                    (tap)="onTouchWhileDock(newDock)"></AbsoluteLayout>
+    <DockLayout #newDock
+                class="dock"
+                (loaded)="onNewDockLoaded($event)"
+                [androidelevation]="sheetElevation"
+                verticalAlignment="bottom">
+        <new-saved *ngIf="enabled" (notify)="onNewNotify($event, newDock)"></new-saved>
+    </DockLayout>
 </GridLayout>

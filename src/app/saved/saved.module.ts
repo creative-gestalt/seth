@@ -3,9 +3,10 @@ import { NativeScriptCommonModule } from 'nativescript-angular/common';
 import { NativeScriptUIListViewModule } from 'nativescript-ui-listview/angular';
 import { NativeScriptFormsModule } from 'nativescript-angular';
 import { SavedRoutingModule } from './saved-routing.module';
-
-import { SavedComponent } from './saved.component';
 import { CommonModule } from '@angular/common';
+
+import { SavedComponent } from './saved/saved.component';
+import { NewSavedComponent } from '~/app/saved/new/new-saved.component';
 
 @NgModule({
     imports: [
@@ -16,7 +17,8 @@ import { CommonModule } from '@angular/common';
         CommonModule
     ],
     declarations: [
-        SavedComponent
+        SavedComponent,
+        NewSavedComponent
     ],
     schemas: [
         NO_ERRORS_SCHEMA

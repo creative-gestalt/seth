@@ -56,12 +56,14 @@ export class DatabaseExercisesPractice {
                 .then((rows) => {
                     const exercises = [];
                     for (const row in rows) {
-                        exercises.push({
-                            id: rows[row][0],
-                            name: rows[row][1],
-                            directions: rows[row][2],
-                            book: rows[row][3]
-                        });
+                        if (rows.hasOwnProperty(row)) {
+                            exercises.push({
+                                id: rows[row][0],
+                                name: rows[row][1],
+                                directions: rows[row][2],
+                                book: rows[row][3]
+                            });
+                        }
                     }
                     resolve(exercises);
                 }, (error) => {
@@ -75,12 +77,14 @@ export class DatabaseExercisesPractice {
             this.db.all('SELECT * FROM exercises ORDER BY id').then((rows) => {
                 const exercises = [];
                 for (const row in rows) {
-                    exercises.push({
-                        id: rows[row][0],
-                        name: rows[row][1],
-                        directions: rows[row][2],
-                        book: rows[row][3]
-                    });
+                    if (rows.hasOwnProperty(row)) {
+                        exercises.push({
+                            id: rows[row][0],
+                            name: rows[row][1],
+                            directions: rows[row][2],
+                            book: rows[row][3]
+                        });
+                    }
                 }
                 resolve(exercises);
             }, (error) => {
@@ -94,12 +98,14 @@ export class DatabaseExercisesPractice {
             this.db.all('SELECT * FROM practice ORDER BY id').then((rows) => {
                 const practice = [];
                 for (const row in rows) {
-                    practice.push({
-                        id: rows[row][0],
-                        name: rows[row][1],
-                        directions: rows[row][2],
-                        book: rows[row][3]
-                    });
+                    if (rows.hasOwnProperty(row)) {
+                        practice.push({
+                            id: rows[row][0],
+                            name: rows[row][1],
+                            directions: rows[row][2],
+                            book: rows[row][3]
+                        });
+                    }
                 }
                 resolve(practice);
             }, (error) => {

@@ -3,6 +3,7 @@
 .material-action-bar {
   background-color: $overlay-06dp-red;
 }
+
 .page__content {
   background-color: $background-dark-red;
 
@@ -30,13 +31,34 @@
     }
   }
 
-  .new-picture-btn {
+  .sheet {
+    background-color: $overlay-02dp-red;
+
+    &-title {
+      white-space: normal;
+      font-weight: normal;
+    }
+
+    &-cancel {
+      width: 45%;
+      background-color: $overlay-06dp-red;
+    }
+
+    &-save {
+      width: 45%;
+      background-color: $overlay-24dp-red;
+    }
+  }
+
+  .new-btn {
     background-color: $overlay-06dp-red;
   }
 }
+
 .nt-drawer__header-background {
   background-color: $overlay-04dp-red;
 }
+
 .nt-drawer__body {
   background-color: $background-dark-red;
 }

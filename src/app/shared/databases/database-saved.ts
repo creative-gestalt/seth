@@ -8,10 +8,10 @@ export class DatabaseSaved {
     private isInstantiated: boolean;
 
     constructor() {
-        // if (!sqlite.exists('saved.sqlite')) {
+        if (!sqlite.exists('saved.sqlite')) {
             sqlite.copyDatabase('saved.sqlite');
             console.log('saved was created');
-        // }
+        }
         if (!this.isInstantiated) {
             (new sqlite('saved.sqlite')).then((db) => {
                 db.execSQL('CREATE TABLE IF NOT EXISTS saved (id INTEGER PRIMARY KEY AUTOINCREMENT, quote TEXT, book TEXT)').then((id) => {
@@ -60,11 +60,13 @@ export class DatabaseSaved {
             this.db.all('SELECT * FROM saved ORDER BY id DESC').then((rows) => {
                 const quotes = [];
                 for (const row in rows) {
-                    quotes.push({
-                        id: rows[row][0],
-                        quote: rows[row][1],
-                        book: rows[row][2]
-                    });
+                    if (rows.hasOwnProperty(row)) {
+                        quotes.push({
+                            id: rows[row][0],
+                            quote: rows[row][1],
+                            book: rows[row][2]
+                        });
+                    }
                 }
                 resolve(quotes);
             }, (error) => {

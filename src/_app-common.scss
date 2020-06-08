@@ -128,6 +128,25 @@
     }
   }
 
+  .sheet {
+    background-color: $overlay-02dp;
+
+    &-title {
+      white-space: normal;
+      font-weight: normal;
+    }
+
+    &-cancel {
+      width: 45%;
+      background-color: $overlay-06dp;
+    }
+
+    &-save {
+      width: 45%;
+      background-color: $overlay-24dp;
+    }
+  }
+
   .color {
     margin-top: 20;
     margin-bottom: 35;
@@ -145,7 +164,7 @@
     }
   }
 
-  .new-picture-btn {
+  .new-btn {
     padding: 0;
     width: 60;
     height: 60;

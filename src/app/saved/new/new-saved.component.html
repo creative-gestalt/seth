@@ -1,0 +1,19 @@
+<FlexboxLayout (loaded)="onLoaded()" class="sheet" height="375">
+    <FlexboxLayout flexDirection="column" justifyContent="flex-start">
+        <StackLayout>
+            <GridLayout rows="auto">
+                <StackLayout>
+                    <Label class="h2 p-15" text="New Entry"></Label>
+                    <ScrollView height="100%">
+                        <TextView class="h3" height="150" [(ngModel)]="quote" hint="Enter quote here"></TextView>
+                    </ScrollView>
+                    <TextField class="h3" [(ngModel)]="book" hint="Enter book title here"></TextField>
+                </StackLayout>
+            </GridLayout>
+            <GridLayout rows="auto" columns="*,*" height="auto">
+                <Button class="sheet-cancel" col="0" text="Cancel" (tap)="onCancel()"></Button>
+                <Button class="sheet-save" col="1" text="Save" (tap)="onSave(quote, book)"></Button>
+            </GridLayout>
+        </StackLayout>
+    </FlexboxLayout>
+</FlexboxLayout>

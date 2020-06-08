@@ -31,7 +31,26 @@
     }
   }
 
-  .new-picture-btn {
+  .sheet {
+    background-color: $overlay-02dp;
+
+    &-title {
+      white-space: normal;
+      font-weight: normal;
+    }
+
+    &-cancel {
+      width: 45%;
+      background-color: $overlay-06dp;
+    }
+
+    &-save {
+      width: 45%;
+      background-color: $overlay-24dp;
+    }
+  }
+
+  .new-btn {
     background-color: $overlay-06dp;
   }
 }
