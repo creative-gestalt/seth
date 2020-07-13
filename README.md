@@ -18,8 +18,8 @@ Use the phone's camera to take pictures of physical book passages, and keep them
 Have an about section with information about the author.
 
 
-<img src="/screenshots/search.png" height="600"> <img src="/screenshots/drawer.png" height="600"> <img src="/screenshots/exercises.png" height="600">
+<img src="/screenshots/search.png" height="400"> <img src="/screenshots/drawer.png" height="400"> <img src="/screenshots/exercises.png" height="400">
 
-<img src="/screenshots/directions.png" height="600"> <img src="/screenshots/practice.png" height="600"> <img src="/screenshots/saved_gray.png" height="600">
+<img src="/screenshots/directions.png" height="400"> <img src="/screenshots/practice.png" height="400"> <img src="/screenshots/saved_gray.png" height="400">
 
-<img src="/screenshots/saved_teal.png" height="600"> <img src="/screenshots/directions_red.png" height="600"> <img src="/screenshots/gallery.jpg" height="600">
+<img src="/screenshots/saved_teal.png" height="400"> <img src="/screenshots/directions_red.png" height="400"> <img src="/screenshots/gallery.jpg" height="400">
